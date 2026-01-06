@@ -1,0 +1,19 @@
+{% extends 'web/base.html' %}
+
+{% block content %}
+<form method="post">
+    {% csrf_token %}
+    <table>
+        {{ form.as_table }}
+    </table>
+    <br>
+    <button type="submit">Отправить</button>
+</form>
+
+{% if result %}
+<div style="margin-top: 20px; padding: 15px; background: #dff0d8; border: 1px solid green;">
+    <h3>Результат:</h3>
+    <p style="font-size: 18px;">{{ result }}</p>
+</div>
+{% endif %}
+{% endblock %}

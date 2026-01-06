@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Домашнее задание</title>
+</head>
+
+<body style="font-family: sans-serif; padding: 20px;">
+    <div style="background: #eee; padding: 10px; margin-bottom: 20px;">
+        {% for item in menu %}
+        <a href="{{ item.url }}" style="margin-right: 15px;">{{ item.name }}</a>
+        {% endfor %}
+    </div>
+    <h1>{{ title }}</h1>
+    {% block content %}{% endblock %}
+</body>
+
+</html>
